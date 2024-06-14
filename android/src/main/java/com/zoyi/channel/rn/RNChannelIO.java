@@ -28,6 +28,11 @@ public class RNChannelIO extends ReactContextBaseJavaModule implements ChannelPl
 
   private boolean hasPushNotificationClickSubscriber = false;
 
+  @Override
+  public boolean canOverrideExistingModule() {
+    return true;
+  }
+
   public RNChannelIO(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
